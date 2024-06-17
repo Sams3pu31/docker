@@ -17,7 +17,7 @@ spec:
           image: springboot-k8s-example:1.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 9090
+            - containerPort: 8082
 
 ---
 
@@ -30,6 +30,6 @@ spec:
     app: spring-boot-k8s
   ports:
     - protocol: "TCP"
-      port: 9090
-      targetPort: 9090
+      port: 8082
+      targetPort: 8082
   type: NodePort
